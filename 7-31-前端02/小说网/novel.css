@@ -1,0 +1,145 @@
+.div{
+    width: 100%;
+    height: 100%;
+    background-color: #E9FAFF;
+    margin: 0 auto;
+}
+#div1{
+    width: 960px;
+    height: auto;
+    background-color: #E3F4E7;
+    text-align: center;
+    margin: 0 auto;
+}
+#div2{
+    width: 960px;
+    height: 27.6px;
+    border: 1px solid #9AE6C5;
+    margin: 0 auto;
+}
+#div2-1{
+    width: 320px;
+    height: 27.6px;
+    float: left;
+}
+#div2-2{
+    width: 320px;
+    height: 27.6px;
+    float: left;
+}
+#div2-3{
+    width: 320px;
+    height: 27.6px;
+    float: left;
+}
+#div3{
+    width: 960px;
+    height: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+#div3-1{
+    width: 234px;
+    height: auto;
+    border: 1px solid #F9CDDE;
+    float: left;
+    margin-left: 4px;
+    margin-top: 30px;
+}
+#div3-1-1{
+    width: 161px;
+    height: 24px;
+    background-color: #FCDEEA;
+    border: 1px solid #F9CDDE;
+    text-align: center;
+    margin: 0 auto;
+}
+.div3-1-2{
+    width: 224px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #e4e4e4;
+}
+.div3-1-3{
+    width: 224px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+#div3-2{
+    width: 234px;
+    height: auto;
+    border: 1px solid #B0DBEC;
+    float: left;
+    margin-left: 4px;
+    margin-top: 30px;
+}
+#div3-2-1{
+    width: 161px;
+    height: 24px;
+    background-color: #D6ECF7;
+    border: 1px solid #B0DBEC;
+    text-align: center;
+    margin: 0 auto;
+}
+#div3-3{
+    width: 234px;
+    height: auto;
+    border: 1px solid #EFEAAA;
+    float: left;
+    margin-left: 4px;
+    margin-top: 30px;
+}
+#div3-3-1{
+    width: 161px;
+    height: 24px;
+    background-color: #FAF1D4;
+    border: 1px solid #EFEAAA;
+    text-align: center;
+    margin: 0 auto;
+}
+#div3-4{
+    width: 234px;
+    height: auto;
+    border: 1px solid #D5E6B9;
+    float: left;
+    margin-left: 4px;
+    margin-top: 30px;
+}
+#div3-4-1{
+    width: 161px;
+    height: 24px;
+    background-color: #E5F8CB;
+    border: 1px solid #D5E6B9;
+    text-align: center;
+    margin: 0 auto;
+}
+.title{
+    transform: translateY(-12px);
+}
+.span-top{
+    font-size: 12px;
+    text-align: center;
+}
+.span1{
+    float: left;
+    margin-left: 6px;
+    color: #555;
+    font-size: 12px
+}
+.span2{
+    float: right;
+    margin-right: 6px;
+    font-size: 12px
+}
+.a1{
+    color: #666;
+}
+.a2{
+    color: #3366BB;
+    text-decoration: none;
+}
+

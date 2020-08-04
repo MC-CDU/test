@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+
+<script>
+    /*
+    js基本数据类型：
+    值类型(基本类型)：
+    字符串（String）、数字(Number)、布尔(Boolean)、
+    对空（Null）、未定义（Undefined）、Symbol
+
+    注：Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值，类似java中的常量。
+     */
+
+    //Number
+    var a = 100;
+    var b = -100;
+    var c = 1.25;
+    var d = NaN;
+    document.write(a + "--->" + typeof a + "<br>");
+    document.write(b + "--->" + typeof b + "<br>");
+    document.write(c + "--->" + typeof c + "<br>");
+    document.write(d + "--->" + typeof d + "<br>");
+
+    //String   单引号，双引号都可以
+    var str1 = "just do it!";
+    var str2 = "";
+    var str3 = 'hello';
+    var str4 = '';
+    document.write(str1 + "--->" + typeof str1 + "<br>");
+    document.write(str2 + "--->" + typeof str2 + "<br>");
+    document.write(str3 + "--->" + typeof str3 + "<br>");
+    document.write(str4 + "--->" + typeof str4 + "<br>");
+
+    //Boolean
+    var t = true;
+    var f = false;
+    document.write(t + "--->" + typeof t + "<br>");
+    document.write(f + "--->" + typeof f + "<br>");
+
+    //重点：Null   null值的typeof 的结果是Object
+    var n = null;
+    document.write(n + "--->" + typeof n + "<br>");
+
+    //重点：Undefined未定义的
+    var u1 = undefined;
+    document.write(u1 + "--->" + typeof u1 + "<br>");
+    var u;
+    document.write(u + "--->" + typeof u + "<br>");
+
+</script>
+</body>
+</html>

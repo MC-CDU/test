@@ -32,6 +32,10 @@ public class ConnectionUtils {
         }
     }
 
+    /**
+     * 返回一个数据库连接对象
+     * @return
+     */
     public static Connection getConnection(){
         Connection connection = null;
         try {

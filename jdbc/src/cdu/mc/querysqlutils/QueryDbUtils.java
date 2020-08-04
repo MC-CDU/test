@@ -12,9 +12,16 @@ import java.util.List;
  * @author lenovo
  */
 public class QueryDbUtils {
-    private static Connection connection = ConnectionUtils.getConnection();
+    private static Connection connection;
 
-    public int update(String sql,Object... objects){
+    /**
+     * 封装所有增加，修改，删除语句
+     * @param sql
+     * @param objects 可变参数
+     * @return 受影响的行数
+     */
+    public static int update(String sql,Object... objects){
+        connection = ConnectionUtils.getConnection();
         PreparedStatement ps = null;
         try {
             ps = connection.prepareStatement(sql);
@@ -36,7 +43,8 @@ public class QueryDbUtils {
      * @param id
      * @return
      */
-    public Student queryById(String id){
+    public static Student queryById(String id){
+        connection = ConnectionUtils.getConnection();
         PreparedStatement ps = null;
         ResultSet resultSet = null;
         Student student = new Student();
@@ -64,7 +72,8 @@ public class QueryDbUtils {
      * @return
      * @throws SQLException
      */
-    public ArrayList<Student> findAllStudent() throws SQLException {
+    public static ArrayList<Student> findAllStudent() throws SQLException {
+        connection = ConnectionUtils.getConnection();
         ArrayList<Student> students = new ArrayList<>();
         PreparedStatement ps = connection.prepareStatement("select * from student");
         ResultSet resultSet = ps.executeQuery();
@@ -84,13 +93,13 @@ public class QueryDbUtils {
      * @param <T>
      * @return
      */
-    public <T> List<T> queryMethod(String sql,Class<T> tClass,Object... objects){
-        Connection conn = ConnectionUtils.getConnection();
+    public static <T> List<T> queryMethod(String sql,Class<T> tClass,Object... objects){
+        connection = ConnectionUtils.getConnection();
         PreparedStatement ps = null;
         ResultSet resultSet = null;
         List<T> list = new ArrayList<>();
         try {
-            ps = conn.prepareStatement(sql);
+            ps = connection.prepareStatement(sql);
             if (objects != null) {
                 for (int i = 0; i < objects.length; i++) {
                     ps.setObject(i+1,objects[i]);
@@ -126,7 +135,7 @@ public class QueryDbUtils {
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtils.close(resultSet,ps,conn);
+            ConnectionUtils.close(resultSet,ps,connection);
         }
         return list;
     }

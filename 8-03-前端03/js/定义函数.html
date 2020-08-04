@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    js中的方法的特点：
+    1. 方法定义是，形参的类型不用写,返回值类型也不写。
+    2. 方法是一个对象，如果定义名称相同的方法，会覆盖
+    3. 在JS中，方法的调用只与方法的名称有关，和参数列表无关
+    4. 在方法声明中有一个隐藏的内置对象（数组），arguments,封装所有的实际参数
+     */
+    //定义函数方法1：
+    var f = new Function("a","b","return a*b");
+    var result = f(2,5);
+    document.write(result + "<br>"); //10
+
+    //定义函数方法2：
+    function method() {
+        alert("尼玛没了！");
+    }
+    var f3 = method();
+    document.write(f3); //undefined
+
+    //定义函数方法3：
+    var f2 = function (a,b) {
+        //返回参数的个数
+        alert(arguments.length);
+        return a - b;
+    }
+    var f1 = f2(10,"15");
+    alert(f1); //-5
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="./img/1.png" id="img" width="100%" height="50%">
+</body>
+<script>
+    var i = 1;
+    var img = document.getElementById("img");
+    //setInterval() 间隔指定的毫秒数不停地执行指定的代码
+    window.setInterval(changeImg,3000);
+    function changeImg() {
+        if (i == 3){
+            i = 1;
+        }
+        img.src = "./img/"+ ++i +".png";
+    }
+</script>
+</html>

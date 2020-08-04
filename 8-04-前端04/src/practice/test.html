@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="div1">
+    <span>just do it!</span>
+</div>
+
+<button onclick="f()">点击显示时间</button>
+<p id="demo"></p>
+</body>
+<script>
+    var innerHTML = document.getElementById("div1").innerHTML;
+    console.log(innerHTML);
+
+    function f() {
+        document.getElementById("demo").innerHTML = new Date();
+    }
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+    Global
+		1. 特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  方法名();
+		2. 方法：
+			encodeURI():url编码,就是将传入的字符串以另一种编码来表示
+			decodeURI():url解码
+            encodeURIComponent():url编码,编码的字符更多
+			decodeURIComponent():url解码
+			parseInt():将字符串转为数字"100abc"
+			    * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+			isNaN():判断一个值是否是NaN
+			    * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+            eval():将 JavaScript 字符串，并把它作为脚本代码来执行。"1+2"
+     */
+    var str = "马聪";
+    //编码
+    var s = encodeURI(str);
+    alert(s);
+    //解码
+    var s1 = decodeURI(s);
+    alert(s1)
+
+    //parseInt()：如果该字符串的字面值全是数字，则可以转换为相应的数值
+    var number1 = parseInt("sasa");
+    document.write(number1 + "--->" + typeof number1 + "<br>"); //NaN number
+
+    var number2 = parseInt("a1000");
+    document.write(number2 + "--->" + typeof number2 + "<br>"); //NaN number
+
+    var number = parseInt("100sasas");
+    document.write(number + "--->" + typeof number + " <br>"); //100 number
+
+    var number3 = parseInt("100s10asas");
+    document.write(number3 + "--->" + typeof number3 + " <br>"); //100 number
+
+    var number4 = parseInt("");
+    document.write(number4 + "--->" + typeof number4 + " <br>"); //NaN number
+
+    //isNaN():判断一个值(number)是否是NaN,NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+    if (isNaN(NaN)) {
+        alert("NaN");
+    }
+    if (NaN == "") {
+        alert("true");
+    }else {
+        alert("false");
+    }
+    if (NaN == NaN) {
+        alert("true");
+    }else {
+        alert("false");
+    }
+
+    //eval():将 JavaScript 字符串，并把它作为脚本代码来执行。"1+2"
+    var eval1 = eval("1 * 10");
+    document.writeln(eval1); //10
+
+    var eval2 = eval("encodeURI('马聪')");
+    document.writeln(eval2); //10%E9%A9%AC%E8%81%AA
+</script>
+</html>

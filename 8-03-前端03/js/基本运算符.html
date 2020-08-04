@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本运算符</title>
+</head>
+<body>
+</body>
+<script>
+    var i = +10;
+    var j = ++i;
+    document.write("i=" + i + " j=" + j + "<br>");
+
+    /*
+    在JS中，如果运算数不是运算符所要求的类型，那么js引擎会自动的将运算数进行类型转换
+    其他类型转number：
+        string转number：按照字面值转换。如果字面值不是数字，则转为NaN（不是数字的数字）
+        boolean转number：true转为1，false转为0
+     */
+    //重点：纯数字的字符串也可以被当做数字型进行运算，除了+/+=，加好会被认为是字符串拼接
+    var str = "100";
+    var str1 = -str;
+    var str2 = str - 100;
+    var str3 = str + 100;
+    var str4 = str * 2;
+    var str5 = ++str;
+    document.write(str1 + "--->" + typeof str1 + "<br>"); //-100--->number
+    document.write(str2 + "--->" + typeof str2 + "<br>"); //0--->number
+    document.write(str3 + "--->" + typeof str3 + "<br>"); //100100--->string
+    document.write(str4 + "--->" + typeof str4 + "<br>"); //200--->number
+    document.write(str5 + "--->" + typeof str5 + "<br>"); //101--->number
+
+    //重点：非纯数字字符串，在运算的过程中会被转换为number类型的NaN进行运算，除了+/+=
+    var str6 = "mc123";
+    var str9 = -str6;
+    var str7 = str6 - 1;
+    var str8 = str6 + 1;
+    document.write(str7 + "--->" + typeof str7 + "<br>"); //NaN--->number
+    document.write(str8 + "--->" + typeof str8 + "<br>"); //mc1231--->string
+    document.write(str9 + "--->" + typeof str9 + "<br>"); //NaN--->number
+
+    //重点：boolean进行运算，Boolean转number：true--1   false--0
+    var t = +true;
+    var f = +false;
+    document.write(t + "--->" + typeof t + "<br>"); //1--->number
+    document.write(f + "--->" + typeof f + "<br>"); //0--->number
+    var t1 = true + 10;
+    document.write(t1 + "--->" + typeof t1 + "<br>"); //11--->number
+
+</script>
+</html>

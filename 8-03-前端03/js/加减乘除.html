@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = 3;
+    var b = 4;
+
+    document.write("a+b=" + (a+b) +"<br>");
+    document.write("a-b=" + (a-b) +"<br>");
+    document.write("a*b=" + (a*b) +"<br>");
+    //考点：java就是0   而js是0.75
+    document.write("a/b=" + (a/b) +"<br>");
+    document.write("a%b=" + (a%b) +"<br>");
+
+    //等值比较 == 只比较字面值 ===先比较类型，如果类型不同直接返回false
+    var i = 100;
+    var str = "100";
+    if (i == str){
+        document.write("相同" + "<br>");
+    }else{
+        document.write("不同" + "<br>");
+    }
+
+    if (i === str){
+        document.write("相同" + "<br>");
+    }else{
+        document.write("不同" + "<br>");
+    }
+
+</script>
+</html>

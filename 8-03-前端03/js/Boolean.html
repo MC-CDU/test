@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*只有布尔对象无初始值或者值为：+/-0,"",'',NaN,null,undefined,false的结果时候false，其他全是true
+        即使是var b1 = new Boolean("false"); 他的结果也是true
+    */
+    var boolean = new Boolean();
+    document.write(boolean + "--->" + typeof boolean + "<br>"); //object
+
+    var b1 = new Boolean(45);
+    document.write(b1 + "<br>");
+    document.write(typeof b1 + "<br>"); //object
+
+    var s = b1.toString();
+    document.write(typeof s); //string
+</script>
+</html>

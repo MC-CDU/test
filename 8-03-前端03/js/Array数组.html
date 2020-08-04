@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    1. JS中，数组元素的类型可变的。
+    2. JS中，数组长度可变的。
+     */
+    //定义数组方式一：
+    var array = new Array(100,"abc","",false);
+    var number = array.push(1000 + "<br>"); //末尾添加，返回添加元素后的数组的长度
+    document.write(number + "<br>"); //弹出数组尾部的元素，并返回该值
+    var b = array.pop();
+    document.write(b);
+    for (let x of array) {
+        alert(x);
+    }
+    document.write(array.length + "<br>");
+
+    //方式二：
+    var array1 = new Array(3);
+    array1[0] = 1;
+    array1[1] = 2;
+    array1[2] = 3;
+    alert(array1[3]); //undefined
+    var s = array1.join("--");
+    document.write(s);
+    /*
+    1--2--3
+    */
+
+    //方式三：
+    var arr = [100,"abc",false];
+    for (var arrElement of arr) {
+        document.write(arrElement + "<br>");
+    }
+    document.write(arr[0] + "<br>");
+    document.write(typeof arr);
+    /*
+    100
+    abc
+    false
+     */
+</script>
+</html>
