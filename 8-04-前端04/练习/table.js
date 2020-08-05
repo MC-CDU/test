@@ -2,12 +2,12 @@ var i = 1;
 function addStu() {
     var htmlTableRowElement = document.createElement("tr");
     var attr = document.createAttribute("id");
-    attr.value = i+"";
+    attr.value = i+"tr";
     htmlTableRowElement.setAttributeNode(attr);
     htmlTableRowElement.innerHTML = "<td class="+i+"><input type='text'></td>" +
         "<td class="+i+"><input type='text'></td>" +
         "<td class="+i+"><input type='text'></td>" +
-        "<td class="+i+"><button class='confirm' onclick='conf()'>确认</button>&nbsp;<button class='delete'  id="+i+">删除</button></td>";
+        "<td class="+i+"><button class='confirm' onclick='conf()'>确认</button>&nbsp;<button class='delete' id="+i+">删除</button></td>";
     var elementsByTagNameElement = document.getElementById("tbody");
     elementsByTagNameElement.appendChild(htmlTableRowElement);
 }
@@ -30,7 +30,8 @@ document.onclick =e=>{
     //     e.target.parentElement.parentElement.remove()
     // }
     if(e.target.className == "delete"){
-        var elementsByTagName = document.getElementById(e.target.id);
+        var elementsByTagName = document.getElementById(e.target.id + "tr");
+        console.log(elementsByTagName);
         var elementsByTagName1 = document.getElementsByTagName("tbody");
         elementsByTagName1[0].removeChild(elementsByTagName);
     }

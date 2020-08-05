@@ -22,7 +22,7 @@ public class C3P0 {
          * mchange-commons-java-0.2.12.jar
          * mysql连接java的jar
          * 2.导入配置文件
-         * 必须是c3p0-config.xml，名称必须相同
+         * 必须是c3p0-config.xml，名称必须相同，最好放在项目的根目录下src
          */
         //创建连接池对象，会自动读取c3p0-config.xml配置文件
         DataSource dataSource = new ComboPooledDataSource();

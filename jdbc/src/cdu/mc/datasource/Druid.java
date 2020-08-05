@@ -18,7 +18,6 @@ import java.util.Properties;
 public class Druid {
 
     public static void main(String[] args) {
-
         /**
          * Druid连接池的使用：
          * 1.导入相关jar：

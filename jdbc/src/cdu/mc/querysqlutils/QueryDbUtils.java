@@ -15,7 +15,7 @@ public class QueryDbUtils {
     private static Connection connection;
 
     /**
-     * 封装所有增加，修改，删除语句
+     * 封装所有增加，修改，删除语句(executeUpdate)
      * @param sql
      * @param objects 可变参数
      * @return 受影响的行数

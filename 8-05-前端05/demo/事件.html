@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<select onchange="province(this)" id="province">
+    <option>--请选择省份--</option>
+    <option value="1">四川</option>
+    <option value="2">广东</option>
+    <option value="3">河北</option>
+</select>
+<select id="city">
+    <option>--请选择城市--</option>
+</select>
+<button onclick="demo()">提交</button>
+</body>
+<script>
+    var sc = ["成都市","南充市","宜宾市"];
+    var gd = ["广州市","深圳市","佛山市","东莞市"];
+    var hb = ["石家庄市","承德市","邢台市"];
+    var myProvince;
+    var myCity;
+    function province(option) {
+        var value = option.value;
+        console.log(value);
+        city(value);
+    }
+    function city(value) {
+        var city = document.getElementById("city");
+        var length = getCityLength(parseInt(value));
+        console.log(length);
+        switch (parseInt(value)) {
+            case 1:
+                myProvince = "四川省";
+                for(var i = 1;i <= length;i++) {
+                    var option = document.createElement("option");
+                    var attr = document.createAttribute("value");
+                    attr.value = i+"";
+                    option.setAttributeNode(attr);
+                    option.innerText = sc[i-1];
+                    city.appendChild(option);
+                }
+                break;
+            case 2:
+                myProvince = "广东省";
+                for(var i = 1;i <= length;i++) {
+                    var option = document.createElement("option");
+                    var attr = document.createAttribute("value");
+                    attr.value = i+"";
+                    option.setAttributeNode(attr);
+                    option.innerText = gd[i-1];
+                    city.appendChild(option);
+                }
+                break;
+            case 3:
+                myProvince = "河北省";
+                for(var i = 1;i <= length;i++) {
+                    var option = document.createElement("option");
+                    var attr = document.createAttribute("value");
+                    attr.value = i+"";
+                    option.setAttributeNode(attr);
+                    option.innerText = hb[i-1];
+                    city.appendChild(option);
+                }
+                break;
+        }
+    }
+    function getCityLength(value) {
+        switch (value) {
+            case 1:
+                return sc.length;
+            case 2:
+                return gd.length;
+            case 3:
+                return hb.length;
+        }
+    }
+
+    function demo() {
+        var elementById = document.getElementById("province");
+        var value = elementById.value;
+        switch (parseInt(value)) {
+            case 1:
+                myCity = sc[document.getElementById("city").value - 1];
+                break;
+            case 2:
+                myCity = gd[document.getElementById("city").value - 1];
+                break;
+            case 3:
+                myCity = hb[document.getElementById("city").value - 1];
+                break;
+        }
+        alert("你选择的地址是：" + myProvince + myCity);
+    }
+</script>
+</html>

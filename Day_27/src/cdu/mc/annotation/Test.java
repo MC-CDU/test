@@ -23,6 +23,7 @@ public class Test {
 
     public static void method(Class<MyClass> myClassClass,String methodName) throws NoSuchMethodException {
         Method declaredMethod = myClassClass.getDeclaredMethod(methodName);
+        //获得方法的名称
         String name = declaredMethod.getName();
         boolean annotationPresent = declaredMethod.isAnnotationPresent(MyAnnotation.class);
         if (annotationPresent) {
@@ -36,6 +37,7 @@ public class Test {
         //获取某个属性
         Field name = myClassClass.getDeclaredField(fieldName);
         name.setAccessible(true);
+        //获取属性的名称
         String name1 = name.getName();
         boolean annotationPresent = name.isAnnotationPresent(MyAnnotation.class);
         if (annotationPresent) {
